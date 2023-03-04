@@ -4,7 +4,7 @@ import "gorm.io/gorm"
 
 type Project struct {
 	gorm.Model
-	Name        string `gorm:"index"`
+	Name        string
 	Description string
-	Milestones  []Milestone
+	Milestones  []Milestone 
 }

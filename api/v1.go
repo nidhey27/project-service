@@ -30,6 +30,12 @@ func NewRESTApiV1() *RESTApiV1 {
 		router,
 	}
 
+	router.GET(path("/"), func(c *gin.Context) {
+		c.JSON(http.StatusOK, gin.H{
+			"status": true,
+		})
+	})
+
 	router.POST(path("projects/:id"), api.EditProject)
 	router.DELETE(path("projects/:id"), api.DeleteProject)
 	router.GET(path("projects"), api.GetProjects)

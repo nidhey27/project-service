@@ -4,6 +4,7 @@ import "gorm.io/gorm"
 
 type Milestone struct {
 	gorm.Model
-	Name  string
-	Tasks []Task
+	Name      string
+	Tasks     []Task
+	ProjectID uint
 }

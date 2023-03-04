@@ -7,4 +7,5 @@ type Task struct {
 	Name        string
 	Description string
 	Done        bool
+	MilestoneID uint
 }
